@@ -47,7 +47,7 @@
               const options = {filters: [{ name: 'GL-BLE#4'}], optionalServices: ['0783B03E-8535-B5A0-7140-A304D2495CB7']};
               //const device = await navigator.bluetooth.requestDevice(options);
              // const device = await navigator.bluetooth.requestDevice( {acceptAllDevices: true,  optionalServices: ['c1b25000-caaf-6d0e-4c33-7dae30052840']} );
-              const device = await navigator.bluetooth.requestDevice( {acceptAllDevices: false,  optionalServices: ['0783B03E-8535-B5A0-7140-A304D2495CB7'.toLowerCase()]} );
+              const device = await navigator.bluetooth.requestDevice( {filters: [{ name: 'GL-BLE#4'}],  optionalServices: ['0783B03E-8535-B5A0-7140-A304D2495CB7'.toLowerCase()]} );
               log("Got device " + device.name);
               console.log(device);
 
